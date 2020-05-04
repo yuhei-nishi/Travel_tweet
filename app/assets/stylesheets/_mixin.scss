@@ -1,0 +1,16 @@
+@mixin he_wi($height,$width){
+  height: $height;
+  width: $width;
+}
+
+@mixin fo_size_color($size,$color){
+  font-size: $size;
+  color: $color;
+}
+
+@mixin he_pa_di_ju($height,$padding){
+  height: $height;
+  padding: $padding;
+  display: flex;
+  justify-content: space-between;
+}
