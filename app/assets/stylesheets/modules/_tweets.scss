@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper{
+  display: flex;
+  .chat-side{
+    @include he_wi(100vh,200px);
+    background-color: $dark_grey;
+    border-right: 5px solid black;
+    .side-header{
+      border-bottom: 5px solid black;
+      background-color: orange;
+      @include he_wi(100px,200px);
+      border-right: 5px solid black;
+      .side-box{
+        @include fo_size_color(20px, black);
+        @include he_pa_di_ju(20px,0 50px);
+        font-weight: bold;
+        line-height: 100px;
+        .edit-user{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+    .groups_box{
+      height: calc(100vh - 100px);
+      overflow: scroll;
+      background-color: orange;
+      .groups{
+        background-color: orange;
+        height: 30px;
+        font-weight: bold;
+        color: black;
+        .group-name{
+          text-align: center;
+          font-size: 15px;
+          padding: 20px 20px 5px 20px;
+          background-color: orange;
+        }
+      }
+    }
+  }
+  .chat-main{
+    @include he_wi(100vh,100vw);
+    background-color: $white_f;
+    .main-header{
+      @include he_pa_di_ju(100px,0 40px);
+      background-color: rgba(224, 185, 8, 0.555);
+      border-bottom: 5px solid black;
+      align-items: center;
+      font-weight: bold;
+      .current-group{
+        @include fo_size_color(20px,#333333);
+      }
+    }
+    a{
+      text-decoration: none;
+      .edit-btn {
+        @include he_wi(40px,72px);
+        @include fo_size_color(16px, black);
+        text-align: center;
+        line-height: 40px;
+        border: 1px solid black;
+      }
+    }
+    .messages{
+      overflow: scroll;
+      background-color: $white_f;
+      height: calc(100vh - 100px);
+      padding: 35px 50px;
+      .message__box{
+        padding-bottom: 20px;
+        .message__username{
+          padding-bottom: 12px;
+          display: flex;
+          .user-name{
+            @include fo_size_color(16px,#333333);
+          }
+          .date-and-time{
+            font-size: 12px;
+            margin-left: 10px;
+            color: #999999;
+          }
+        }
+        .comment{
+          font-size: 14px;
+          color: #434A54;
+        }
+      }
+    }
+  }
+}
