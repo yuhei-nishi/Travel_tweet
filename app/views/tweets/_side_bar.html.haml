@@ -1,9 +1,10 @@
 .chat-side
   .side-header
     .side-box 
-      .user-name 西雄平
+      .user-name
+        = current_user.name
       %ul.menu
-        = link_to "#", class: "edit-user" do
+        = link_to edit_user_path(current_user), class: "edit-user" do
           %i.fa.fa-cog
   .groups
     .groups__box
