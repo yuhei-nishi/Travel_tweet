@@ -5,7 +5,7 @@
   display: flex;
   .chat-side{
     @include he_wi(100vh,200px);
-    background-color: $dark_grey;
+    background-color: orange;
     border-right: 5px solid black;
     .side-header{
       border-bottom: 5px solid black;
@@ -88,6 +88,15 @@
           color: #434A54;
         }
       }
+    }
+  }
+  .chat-side_right{
+    @include he_wi(100vh,200px);
+    background-color: orange;
+    border-left: 5px solid black;
+    .side-header_right{
+      border-bottom: 5px solid black;
+      @include he_wi(100px,200px);
     }
   }
 }
