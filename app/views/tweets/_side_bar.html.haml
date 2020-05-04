@@ -6,16 +6,14 @@
       %ul.menu
         = link_to edit_user_path(current_user), class: "edit-user" do
           %i.fa.fa-cog
+        
   .groups
     .groups__box
-      %p.groups__box__name 北海道
-    .groups__box
-      %p.groups__box__name 北海道
-    .groups__box
-      %p.groups__box__name 北海道
-    .groups__box
-      %p.groups__box__name 北海道
-    .groups__box
-      %p.groups__box__name 北海道
-    .groups__box
-      %p.groups__box__name 北海道
+      - current_user.groups.each do |group|
+        .groups__box
+          = link_to '#' do
+            .groups__box__name
+              = group.name
+    
+      = link_to new_group_path, class: "edit-user" do
+        %i.fa.fa-cog
